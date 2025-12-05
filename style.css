@@ -1,0 +1,316 @@
+:root{
+	/* Color Palette for Dark Theme */
+	--bg-1: #0f172a; /* Deep Navy Blue */
+	--bg-2: #090f1d; /* Even Deeper Blue for gradient end */
+	--card: rgba(255, 255, 255, 0.05); /* Slightly transparent white for cards */
+	--accent: #1e90ff; /* Bright Dodger Blue for emphasis */
+	--accent-hover: #46a3ff;
+	--text: #e2e8f0; /* Off-white for general text */
+	--muted: #94a3b8; /* Light gray-blue for secondary text */
+	--radius: 10px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	margin:0;
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	color: var(--text);
+	background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+	max-width:1100px;
+	margin:36px auto;
+	padding:28px;
+	/* Centering: Blocks and inline content */
+	text-align: center; 
+}
+
+/* Top navigation */
+.topnav{
+	display:flex;
+	gap:18px;
+	align-items:center;
+	flex-wrap:wrap;
+	margin-bottom:30px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	padding-bottom: 12px;
+	/* Center the navigation bar */
+	justify-content: center; 
+}
+.topnav a{
+	color: var(--muted);
+	text-decoration:none;
+	padding:10px 16px; 
+	border-radius:var(--radius);
+	font-weight:600;
+	transition: background-color 0.2s, color 0.2s;
+}
+.topnav a:hover{
+	color: var(--text);
+	background:rgba(30, 144, 255, 0.1);
+}
+.topnav a[aria-current="page"]{
+	background:var(--accent);
+	color:var(--bg-1);
+	font-weight: 700;
+}
+
+/* Hero */
+.hero{
+	display:flex;
+	flex-direction:column;
+	align-items:center; /* Center items for centered layout */
+	gap:8px;
+	margin-bottom:30px;
+}
+.name{font-family:'Merriweather', serif;font-size:3.2rem;margin:0;color:var(--text);} 
+.tagline{margin:0;color:var(--accent);font-weight: 400;font-style: italic;font-size: 1.2rem;} 
+
+/* Layout grid for content on larger screens - REMOVED/MODIFIED */
+@media(min-width:900px){
+	/* Keep the container as a single centered column on all pages */
+	.container{
+		display: block; /* Force single column */
+		text-align: center; 
+	}
+	/* Ensure the hero section remains centered */
+	.hero{align-items: center;}
+	
+	/* For the index.html attributes list, we can keep the grid inside the card, but center the card itself */
+	.attributes { max-width: 900px; margin: 25px auto; }
+}
+
+/* Cards (General styling for all sections) */
+.card{
+	background:var(--card);
+	border-radius:var(--radius);
+	box-shadow:0 6px 18px rgba(0, 0, 0, 0.3);
+	padding:30px; /* Increased padding */
+	border:1px solid rgba(255, 255, 255, 0.1);
+	margin-bottom:25px; /* Increased margin */
+	text-align: center; /* Ensure content is centered inside the card */
+	max-width: 900px; /* NEW: Limit the maximum width of the cards for better centering on large screens */
+	margin-left: auto; /* NEW: Center the card element itself */
+	margin-right: auto; /* NEW: Center the card element itself */
+}
+
+h1,h2,h3{margin:0 0 16px 0;color:var(--text)} 
+h1{font-size:2.4rem;font-weight:700;} 
+h2{
+	font-size:1.6rem; 
+	font-weight:600;
+	border-bottom: 2px solid var(--accent);
+	padding-bottom: 6px;
+	display: inline-block;
+}
+h3{font-size:1.4rem;font-weight:600;color:var(--accent-hover);} 
+p{margin:0 auto 18px auto;color:var(--text);line-height:1.8;max-width: 700px;} /* Uses auto margins to center the paragraph */
+.small{color:var(--muted);font-size:1rem;margin-bottom: 25px;} 
+
+/* Links */
+a{color:var(--accent);text-decoration:none;transition:color 0.2s;}
+a:hover{color:var(--accent-hover);text-decoration:underline;}
+
+/* Attributes list (Need to override text-align to left for readability inside the list items) */
+.attributes ul{list-style:none;padding:0;margin:0 auto;display:grid;grid-template-columns:1fr;gap:15px;text-align: left; max-width: 800px;}
+@media(min-width:600px){
+	.attributes ul{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+}
+.attributes li{background:rgba(255, 255, 255, 0.03);padding:18px;border-radius:var(--radius);border:1px solid rgba(255, 255, 255, 0.05);} 
+.attributes strong{color:var(--text)}
+
+/* Unordered lists (Used in Resume/Blog/Contact, need to override text-align to left for readability) */
+.card ul {
+	list-style-position: outside; /* Changed to outside for better padding control */
+	padding-left: 20px;
+	margin: 0 auto 16px auto;
+	max-width: 700px;
+	text-align: left;
+}
+.card ul li {
+	margin-bottom: 8px;
+	line-height: 1.6;
+}
+
+/* For contact page and resume page links, ensure they are centered and readable */
+.card > p:not(.small) a {
+    display: inline-block;
+    padding: 2px 0;
+}
+.card > p:not(.small) {
+    max-width: none; /* Let all contact links fill the space */
+}
+
+/* Buttons and Resume Link */
+.btn{display:inline-block;background:var(--accent);color:var(--bg-1);padding:12px 20px;border-radius:var(--radius);text-decoration:none;font-weight:700;transition:background-color 0.2s;font-size: 1.1rem;} 
+.btn:hover{background:var(--accent-hover);text-decoration:none;}
+.resume{color:var(--accent);font-weight:600;text-decoration:underline;font-size: 1.1rem;} 
+.resume:hover{color:var(--accent-hover);text-decoration:none;}
+
+/* Embedded PDF (Ensure it's centered) */
+.card object {
+    margin: 20px auto;
+    display: block;
+}
+
+
+/* Projects list */
+.project-list{
+	display:grid;
+	gap:25px;
+	max-width: 800px; /* Limit project list width to keep it centered and manageable */
+	margin: 0 auto;
+} 
+.project-list .card{
+	padding:25px;
+	border-left: 5px solid var(--accent);
+	text-align: left; /* NEW: Keep project text left-aligned for better readability */
+	margin: 0; /* Remove auto margins to let project-list center them */
+	max-width: none; /* Let the project-list container manage the width */
+}
+.project-list .card h3 {
+	text-align: center; /* Center project titles */
+}
+.project-list .card p{
+	font-size: 1rem; 
+	line-height: 1.6;
+	margin: 0 0 12px 0; /* Reset paragraph margins for project details */
+	max-width: none;
+}
+.project-list .card p:last-of-type {
+	margin-bottom: 0;
+}
+
+
+/* Contact form (Need to align elements within the centered card) */
+form {
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: left; /* Aligns input labels and fields left within the form container */
+}
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+form input[type="text"],form input[type="email"],form textarea{
+	width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255, 255, 255, 0.2);
+	margin-top:6px;margin-bottom:12px;font-size:1rem; 
+	background: rgba(0, 0, 0, 0.2);
+	color: var(--text);
+}
+form input:focus, form textarea:focus {
+    outline: 2px solid var(--accent);
+    border-color: var(--accent);
+}
+form button.btn{border:none;cursor: pointer;margin-top: 10px; display: block;} /* Make button block to span full width */
+
+/* Footer */
+.site-footer{text-align:center;color:var(--muted);font-size:1rem;margin-top:20px;padding-top: 20px;border-top: 1px solid rgba(255, 255, 255, 0.1);}
+
+/* Small screens adjustments */
+@media(max-width:899px){
+	.container{padding:18px;margin:18px;text-align: center;}
+	.topnav{justify-content:center;}
+}
+
+/* Utility */
+.muted{color:var(--muted)}
+
+
+/* ... (rest of your style.css remains the same) ... */
+
+/* Projects list */
+.project-list, .blog-list { /* Added .blog-list here to share styles */
+	display:grid;
+	gap:25px;
+	max-width: 800px; /* Limit list width to keep it centered and manageable */
+	margin: 0 auto;
+} 
+.project-list .card, .blog-list .card { /* Added .blog-list here to share styles */
+	padding:25px;
+	border-left: 5px solid var(--accent);
+	text-align: left; /* Keep card content left-aligned for readability */
+	margin: 0; 
+	max-width: none; 
+}
+
+/* Ensure blog/project titles are centered */
+.project-list .card h3, .blog-list .card h3 { 
+	text-align: center;
+}
+/* Ensure the "Read Article" link is left-aligned with the text */
+.project-list .card p, .blog-list .card p{
+	font-size: 1rem; 
+	line-height: 1.6;
+	margin: 0 0 12px 0; 
+	max-width: none;
+}
+/* ... (rest of your style.css remains the same) ... */
+
+/* Add multi-column layout for projects/blog on wide screens for better use of space */
+@media (min-width: 768px) {
+    .project-list, .blog-list {
+        grid-template-columns: repeat(2, 1fr); /* 2-column grid for articles/projects */
+    }
+}
+
+/* ... (rest of style.css remains the same, until the .contact-links style) ... */
+
+/* Contact Section Styling */
+.contact-links {
+	/* New: Use a grid to display profiles horizontally on large screens */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 15px;
+    margin: 25px auto;
+    max-width: 900px;
+}
+
+.contact-links p {
+    margin: 0; /* Remove default paragraph margin */
+}
+
+/* Style for the individual boxed link */
+.contact-box-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    border-radius: var(--radius);
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s, transform 0.2s, border-color 0.2s;
+    color: var(--text); /* Ensure the link text is visible */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-box-link:hover {
+    background: rgba(30, 144, 255, 0.15); /* Light hover effect */
+    border-color: var(--accent-hover);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.contact-links .icon-placeholder {
+    /* Keep the icon size and alignment */
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    text-align: center;
+    line-height: 24px;
+    font-size: 1.5rem;
+    margin-right: 8px; /* Spacing between icon and text */
+}
+
+/* Override the previous inline style block if it exists */
+.card > p:not(.small) a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}

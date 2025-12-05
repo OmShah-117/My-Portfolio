@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact — Om Atul Shah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <nav class="topnav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+
+        <section class="card">
+            <h1>Contact</h1>
+            <p class="small">Feel free to reach out — I'm open to collaborations and discussions.</p>
+
+            <div class="contact-links">
+                <a href="mailto:oshah0801@gmail.com" class="profile-link-box">
+                    <span class="icon-placeholder">📧</span> 
+                    Email
+                </a>
+                <a href="https://www.linkedin.com/in/om-shah-943676259/" target="_blank" rel="noopener" class="profile-link-box">
+                    <span class="icon-placeholder">🔗</span> 
+                    LinkedIn
+                </a>
+                <a href="https://github.com/OmShah-117" target="_blank" rel="noopener" class="profile-link-box">
+                    <span class="icon-placeholder">🐙</span> 
+                    GitHub
+                </a>
+                <a href="https://www.hackerrank.com/profile/oshah0801" target="_blank" rel="noopener" class="profile-link-box">
+                    <span class="icon-placeholder">💻</span> 
+                    HackerRank
+                </a>
+                <a href="https://medium.com/@oshah0801" target="_blank" rel="noopener" class="profile-link-box">
+                    <span class="icon-placeholder">✍️</span> 
+                    Medium
+                </a>
+            </div>
+
+            <h2>Quick message</h2>
+            <form action="https://formsubmit.co/oshah0801@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Message from Your Portfolio Site">
+                <input type="hidden" name="_next" value="https://[YOUR-GITHUB-USERNAME].github.io/[YOUR-REPO-NAME]/contact.html?message=success">
+
+                <label>Name<br><input type="text" name="name" required></label><br><br>
+                <label>Email<br><input type="email" name="email" required></label><br><br>
+                <label>Message<br><textarea name="message" rows="6" required></textarea></label><br><br>
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </section>
+
+        <footer class="site-footer">© <span id="year"></span> Om Atul Shah</footer>
+    </main>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

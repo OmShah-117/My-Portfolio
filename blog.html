@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Blog — Om Atul Shah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <nav class="topnav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html" aria-current="page">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <section class="card">
+            <h1>My Writings</h1>
+            <p class="small">Insights and notes on Data Science, Machine Learning, and related concepts published on Medium.</p>
+            
+            <div class="blog-list project-list">
+                
+                <article class="card">
+                    <h3>Stop Guessing: A Simple Intro to the Data Science That Runs Your Life</h3>
+                    <p>An accessible overview of how data science principles are used daily and how they translate raw data into actionable insights for the modern world.</p>
+                    <p><a href="https://medium.com/@oshah0801/stop-guessing-a-simple-intro-to-the-data-science-that-runs-your-life-91beaf8434b6" target="_blank" rel="noopener">Read Article →</a></p>
+                </article>
+
+                <article class="card">
+                    <h3>How Statistics Found Its Way From Kings to Algorithms</h3>
+                    <p>A look at the historical progression of statistics, detailing its journey from early governmental use to becoming the fundamental engine behind today's complex algorithms.</p>
+                    <p><a href="https://medium.com/@oshah0801/how-statistics-found-its-way-from-kings-to-algorithms-8d13ad688bb9" target="_blank" rel="noopener">Read Article →</a></p>
+                </article>
+
+                <article class="card">
+                    <h3>Data Science vs. Machine Learning: Understanding the Difference in the AI Era</h3>
+                    <p>A clear breakdown of the core differences and overlaps between the fields of Data Science and Machine Learning, clarifying their distinct roles in the current AI landscape.</p>
+                    <p><a href="https://medium.com/@oshah0801/data-science-vs-machine-learning-understanding-the-difference-in-the-ai-era-1154f4f4aaef" target="_blank" rel="noopener">Read Article →</a></p>
+                </article>
+
+                <article class="card">
+                    <h3>The Data Scientist's First Job: A Step-by-Step Guide to Data Wrangling with Pandas</h3>
+                    <p>A practical, hands-on guide focusing on the critical first steps of any data science project: cleaning, transforming, and preparing data using the powerful Pandas library.</p>
+                    <p><a href="https://medium.com/@oshah0801/the-data-scientists-first-job-a-step-by-step-guide-to-data-wrangling-with-pandas-acf236aa7e03" target="_blank" rel="noopener">Read Article →</a></p>
+                </article>
+
+                <article class="card">
+                    <h3>Stop Building Blind: Use EDA to Uncover the Secrets Hidden in Your Data</h3>
+                    <p>Emphasizing the importance of Exploratory Data Analysis (EDA) as a mandatory first step to gain a deep understanding of datasets before model development.</p>
+                    <p><a href="https://medium.com/@oshah0801/stop-building-blind-use-eda-to-uncover-the-secrets-hidden-in-your-data-42922154a019" target="_blank" rel="noopener">Read Article →</a></p>
+                </article>
+            </div>
+            
+            <p style="margin-top: 30px;">
+                <a class="btn" href="https://medium.com/@oshah0801" target="_blank" rel="noopener">Explore All Articles</a>
+            </p>
+        </section>
+
+        <footer class="site-footer">© <span id="year"></span> Om Atul Shah</footer>
+    </main>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

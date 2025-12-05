@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Projects — Om Atul Shah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <nav class="topnav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html" aria-current="page">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <section class="card">
+            <h1>Projects</h1>
+            <p class="small">A selection of recent work and experiments in Machine Learning and Data Science.</p>
+
+            <div class="project-list">
+                <article class="card">
+                    <h3>EV Battery Thermal Runaway Risk Predictor</h3>
+                    <p>Built an XGBoost-based predictor with 95% accuracy and 0.94 ROC-AUC. Engineered features from voltage, current, and temperature data. Developed a Streamlit UI for real-time risk scoring, enabling an estimated 15% hazard reduction.</p>
+                    <p>Tech Stack: Python, scikit-learn, XGBoost, Pandas, Streamlit.</p>
+                    <p><a href="https://github.com/OmShah-117/Deep-Learning/tree/main/EV%20Battery%20Thermal%20Runaway%20Risk%20Predictor" target="_blank" rel="noopener">Repository</a></p>
+                </article>
+
+                <article class="card">
+                    <h3>Credit Card Fraud Detection Using ANN</h3>
+                    <p>Developed an ANN model on 284k+ transactions with extreme class imbalance. Utilized SMOTE and Random Search tuning. Achieved 99.64% accuracy with an 81.4% F1-score, balancing false positives/negatives to reduce financial risk.</p>
+                    <p>Tech Stack: Python, TensorFlow/Keras, Pandas, NumPy, scikit-learn, Keras Tuner.</p>
+                    <p><a href="https://github.com/OmShah-117/Deep-Learning/tree/main/Credit%20Card%20Fraud%20Detection" target="_blank" rel="noopener">Repository</a></p>
+                </article>
+
+                <article class="card">
+                    <h3>Exoplanet Data Analysis</h3>
+                    <p>Analysis of satellite data to identify and characterize potential exoplanets. Used data science techniques to process complex astronomical datasets and derive insights into planetary characteristics.</p>
+                    <p><a href="https://github.com/OmShah-117/Satellite-Data-Analysis/tree/main/Exoplanet%20Data%20Analysis" target="_blank" rel="noopener">Repository</a></p>
+                </article>
+
+                <article class="card">
+                    <h3>Kepler's Data Analysis</h3>
+                    <p>A comprehensive data analysis project focusing on Kepler mission data. Explored transit photometry and related metrics to validate and analyze exoplanetary candidates.</p>
+                    <p><a href="https://github.com/OmShah-117/Satellite-Data-Analysis/tree/main/Kepler's%20Data%20Analysis" target="_blank" rel="noopener">Repository</a></p>
+                </article>
+                
+                <article class="card">
+                    <h3>Advertise Sales Prediction</h3>
+                    <p>Developed a machine learning model to predict sales based on advertising spending across different media channels. Focused on regression techniques to provide actionable insights for budget allocation.</p>
+                    <p><a href="https://github.com/OmShah-117/Machine-Learning/tree/main/Advertise%20Sales%20Prediction" target="_blank" rel="noopener">Repository</a></p>
+                </article>
+                
+                <article class="card">
+                    <h3>Customer Churn Prediction</h3>
+                    <p>Implemented a classification model to predict which customers are likely to churn. This project involved data preprocessing, feature engineering, and selecting an optimal model to help a business retain customers.</p>
+                    <p><a href="https://github.com/OmShah-117/Machine-Learning/tree/main/Churn%20Prediction" target="_blank" rel="noopener">Repository</a></p>
+                </article>
+            </div>
+        </section>
+
+        <footer class="site-footer">© <span id="year"></span> Om Atul Shah</footer>
+    </main>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

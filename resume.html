@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Resume — Om Atul Shah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <nav class="topnav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="resume.html" aria-current="page">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <section class="card">
+            <h1>Resume</h1>
+            <p class="small">Download a PDF version or review highlights below.</p>
+            <p><a class="resume" href="Om_Shah_Resume.pdf" download>Download Resume (PDF)</a></p>
+
+            <!-- Embedded PDF preview: place `Om_Shah_Resume.pdf` in the project root for this to display -->
+            <object data="Om_Shah_Resume.pdf" type="application/pdf" width="100%" height="700">
+                <p>Your browser does not support embedded PDFs. You can <a href="Om_Shah_Resume.pdf">download the resume here</a>.</p>
+            </object>
+
+            <h2>Summary</h2>
+            <p>I am Om Shah, a B.Tech IT student with a strong foundation in mathematics and a deep interest in machine learning and deep learning. I have experience as a Data Engineering Intern , where I processed 50k+ records using Pandas/NumPy, improving data handling efficiency by 30%. I also built Power BI dashboards, enhancing reporting efficiency. In my projects, I developed an ANN model for Credit Card Fraud Detection that achieved 99.64% accuracy and an XGBoost-based EV Battery Thermal Runaway Risk Predictor with 95% accuracy. <br>My technical skills include Python, SQL, Java, Scikit-learn, TensorFlow, Keras, PyTorch, Pandas, NumPy, and MySQL. I am currently pursuing my B.Tech in Information Technology at Walchand Institute of Technology.</p>
+        </section>
+
+        <footer class="site-footer">© <span id="year"></span> Om Atul Shah</footer>
+    </main>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

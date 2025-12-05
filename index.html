@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <nav class="topnav" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <header class="hero">
+            <h1 class="name">Om Atul Shah</h1>
+            <p class="tagline">Data Analyst • Data Scientist • Machine Learning</p>
+        </header>
+
+        <section class="card about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <p>A Builder Who Loves to Learn</p>
+            <p>I am Om Shah, a 21-year-old currently pursuing my Bachelor of Technology (B.Tech) degree in Information Technology (IT). I chose Information Technology for my B.Tech because I saw coding not just as a class, but as a fascinating tool, a powerful way to build new, smart solutions for complex challenges. This passion led me into Data Science and Machine Learning. I focus on building reliable, intelligent models that discover patterns, make accurate forecasts, and turn raw information into smart decisions.</p>
+            <p>I'm also focused on the future of computing: Quantum Technology, especially Quantum Computing and Quantum Machine Learning (QML). I share my insights monthly on LinkedIn. Outside work I'm a lifelong space enthusiast and an avid reader of science and history.</p>
+        </section>
+        <section class="card attributes" aria-labelledby="attrs-heading">
+            <h2 id="attrs-heading">Core Attributes</h2>
+            <ul>
+                <li><strong>Passionate</strong> — Enthusiastically drive projects with genuine commitment.</li>
+                <li><strong>Dedicated</strong> — Consistently deliver exceptional results through perseverance.</li>
+                <li><strong>Logical</strong> — Approach obstacles with structured, systematic thinking.</li>
+                <li><strong>Analytical</strong> — Synthesize data to inform strategic decisions.</li>
+                <li><strong>Intellectual</strong> — Rapidly acquire new technical skills and concepts.</li>
+            </ul>
+        </section>
+
+        <footer class="site-footer">© <span id="year"></span> Om Atul Shah</footer>
+        <h5>All Rights Reserved</h5>
+    </main>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
+
